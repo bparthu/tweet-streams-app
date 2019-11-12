@@ -6,17 +6,7 @@ const main = () => {
         // refactor this later
         console.log(`tracking - ${tweet.track}`);
         const data = tweet.res;
-        let ret = {text: data.text};
-        if(data.extended_tweet) {
-            ret.extended_tweet = {full_text: data.extended_tweet.full_text}
-        } else {
-            if(data.retweeted_status) {
-                ret.text = data.retweeted_status.text;
-                if(data.retweeted_status.extended_tweet) {
-                    ret.extended_tweet = {full_text: data.retweeted_status.extended_tweet.full_text}
-                }
-            }
-        }
+        let ret = {text: data.text, url: `http://twitter.com/${data.user.screen_name}/status/${data.id_str}`};
         return ret;
     });
     
