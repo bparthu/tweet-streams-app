@@ -6,5 +6,6 @@ module.exports = {
     T_CONSUMER_SECRET: process.env.TWITTER_CONSUMER_SECRET,
     T_TOKEN_KEY: process.env.TWITTER_ACCESS_TOKEN_KEY,
     T_TOKEN_SECRET: process.env.TWITTER_ACCESS_TOKEN_SECRET,
-    T_STREAM_TIMEOUT: parseInt(process.env.TWITTER_STREAM_TIMEOUT)
+    T_STREAM_TIMEOUT: parseInt(process.env.TWITTER_STREAM_TIMEOUT),
+    PORT: process.env.PORT
 }
